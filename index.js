@@ -10,11 +10,16 @@ app.set("view engine", "ejs");
 let pLangueges = [];
 
 app.get("/", (req, res) => {
-  res.render("index", { pLNames: pLangueges });
+  res.render("index", {
+    title: "Home",
+    pLNames: pLangueges,
+  });
 });
 
 app.get("/contact", (req, res) => {
-  res.render("contact", {});
+  res.render("contact", {
+    title: "Contact",
+  });
 });
 
 app.post("/", (req, res) => {
