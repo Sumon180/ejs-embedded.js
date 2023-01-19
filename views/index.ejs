@@ -1,0 +1,19 @@
+<%- include("layout/header")%>
+  <main>
+    <form action="/" method="post">
+      <input type="text" placeholder="programming language" name="pLanguege" />
+      <button type="submit">Add</button>
+    </form>
+
+    <ul>
+      <li>Java Programming</li>
+      <% if(pLNames.length > 0){ %>
+      <% for(let x=0; x<pLNames.length; x++){%>
+      <li><%= pLNames[x] %></li>
+      <%}%>    
+        <%}else{%>
+      <p>No Data found</p>
+      <%}%>
+      </ul>
+    </main>
+    <%- include("layout/footer")%>
